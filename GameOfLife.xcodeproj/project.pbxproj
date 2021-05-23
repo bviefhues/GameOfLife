@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		6DD51904265A4E3200EFAF89 /* GameOfLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51903265A4E3200EFAF89 /* GameOfLifeApp.swift */; };
-		6DD51906265A4E3200EFAF89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51905265A4E3200EFAF89 /* ContentView.swift */; };
+		6DD51906265A4E3200EFAF89 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51905265A4E3200EFAF89 /* GridView.swift */; };
 		6DD51908265A4E3300EFAF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD51907265A4E3300EFAF89 /* Assets.xcassets */; };
 		6DD5190B265A4E3300EFAF89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5190A265A4E3300EFAF89 /* Preview Assets.xcassets */; };
+		6DD51914265A4E5A00EFAF89 /* LifeGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51913265A4E5A00EFAF89 /* LifeGameModel.swift */; };
+		6DD51916265A7A8D00EFAF89 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51915265A7A8D00EFAF89 /* CellView.swift */; };
+		6DD51919265A7C8B00EFAF89 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD51918265A7C8B00EFAF89 /* Grid.swift */; };
+		6DD5191B265A7CA800EFAF89 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5191A265A7CA800EFAF89 /* GridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6DD51900265A4E3200EFAF89 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD51900265A4E3200EFAF89 /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD51903265A4E3200EFAF89 /* GameOfLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeApp.swift; sourceTree = "<group>"; };
-		6DD51905265A4E3200EFAF89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6DD51905265A4E3200EFAF89 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		6DD51907265A4E3300EFAF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DD5190A265A4E3300EFAF89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DD5190C265A4E3300EFAF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DD5190D265A4E3300EFAF89 /* GameOfLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameOfLife.entitlements; sourceTree = "<group>"; };
+		6DD51913265A4E5A00EFAF89 /* LifeGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeGameModel.swift; sourceTree = "<group>"; };
+		6DD51915265A7A8D00EFAF89 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		6DD51918265A7C8B00EFAF89 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		6DD5191A265A7CA800EFAF89 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +53,7 @@
 		6DD51901265A4E3200EFAF89 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DD51900265A4E3200EFAF89 /* GameOfLife.app */,
+				6DD51900265A4E3200EFAF89 /* Game of Life.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				6DD51903265A4E3200EFAF89 /* GameOfLifeApp.swift */,
-				6DD51905265A4E3200EFAF89 /* ContentView.swift */,
+				6DD51917265A7C7500EFAF89 /* Model */,
+				6DD51905265A4E3200EFAF89 /* GridView.swift */,
+				6DD51915265A7A8D00EFAF89 /* CellView.swift */,
 				6DD51907265A4E3300EFAF89 /* Assets.xcassets */,
 				6DD5190C265A4E3300EFAF89 /* Info.plist */,
 				6DD5190D265A4E3300EFAF89 /* GameOfLife.entitlements */,
@@ -71,12 +81,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6DD51917265A7C7500EFAF89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DD51913265A4E5A00EFAF89 /* LifeGameModel.swift */,
+				6DD51918265A7C8B00EFAF89 /* Grid.swift */,
+				6DD5191A265A7CA800EFAF89 /* GridCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DD518FF265A4E3200EFAF89 /* GameOfLife */ = {
+		6DD518FF265A4E3200EFAF89 /* Game of Life */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DD51910265A4E3300EFAF89 /* Build configuration list for PBXNativeTarget "GameOfLife" */;
+			buildConfigurationList = 6DD51910265A4E3300EFAF89 /* Build configuration list for PBXNativeTarget "Game of Life" */;
 			buildPhases = (
 				6DD518FC265A4E3200EFAF89 /* Sources */,
 				6DD518FD265A4E3200EFAF89 /* Frameworks */,
@@ -86,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = GameOfLife;
+			name = "Game of Life";
 			productName = GameOfLife;
-			productReference = 6DD51900265A4E3200EFAF89 /* GameOfLife.app */;
+			productReference = 6DD51900265A4E3200EFAF89 /* Game of Life.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DD518FF265A4E3200EFAF89 /* GameOfLife */,
+				6DD518FF265A4E3200EFAF89 /* Game of Life */,
 			);
 		};
 /* End PBXProject section */
@@ -140,8 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD51906265A4E3200EFAF89 /* ContentView.swift in Sources */,
+				6DD51916265A7A8D00EFAF89 /* CellView.swift in Sources */,
+				6DD51906265A4E3200EFAF89 /* GridView.swift in Sources */,
 				6DD51904265A4E3200EFAF89 /* GameOfLifeApp.swift in Sources */,
+				6DD51919265A7C8B00EFAF89 /* Grid.swift in Sources */,
+				6DD51914265A4E5A00EFAF89 /* LifeGameModel.swift in Sources */,
+				6DD5191B265A7CA800EFAF89 /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DD51910265A4E3300EFAF89 /* Build configuration list for PBXNativeTarget "GameOfLife" */ = {
+		6DD51910265A4E3300EFAF89 /* Build configuration list for PBXNativeTarget "Game of Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DD51911265A4E3300EFAF89 /* Debug */,
